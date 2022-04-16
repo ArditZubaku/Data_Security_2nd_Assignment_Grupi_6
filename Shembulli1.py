@@ -1,5 +1,6 @@
 import base64
 
+def start():
 selekto=input("Enkodim apo Dekodim? ")
 if selekto=="Enkodim":
 
@@ -8,6 +9,7 @@ if selekto=="Enkodim":
     mssgtob64 = base64.b32encode(mssgencoded)
     mssgdecoded = mssgtob64.decode("UTF-8")
     print("Base32 Encoded:", mssgdecoded)
+    start()
     
 elif selekto=="Dekodim":
     mssg=input("Enter your message:")
@@ -15,5 +17,9 @@ elif selekto=="Dekodim":
     mssgdecoded2 = base64.b32decode(mssgencoded2)
     finalmssg = mssgdecoded2.decode("UTF-8")
     print(finalmssg)
+    start()
 else:
     print("Duhet te shkruani Enkodim ose Dekodim")
+    
+    
+start()
