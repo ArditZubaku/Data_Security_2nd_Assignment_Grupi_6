@@ -1,0 +1,5 @@
+import base64
+s="A simple example of encoding and decoding in python!!"
+print("Message:",s)
+b=s.encode("UTF-8")
+e=base64.b32encode(b)
